@@ -8,7 +8,7 @@
 
 import Foundation
 
-func BlowUp(startString: String, times: Int, remain: Int) -> String {
+func blowUp(startString: String, times: Int, remain: Int) -> String {
   var endString = ""
   if remain == 0 {
     return endString
@@ -20,7 +20,7 @@ func BlowUp(startString: String, times: Int, remain: Int) -> String {
     copy -= 1
   }
   let copies = Int(spot) ?? 0
-  endString += BlowUp(startString: String(startString.suffix(remain - 1)),
+  endString += blowUp(startString: String(startString.suffix(remain - 1)),
   times: copies, remain: (remain - 1))
   return endString
 }
@@ -34,6 +34,6 @@ if inputSize == 0 {
   exit(0)
 } else {
   let starter = 0
-  let result = BlowUp(startString: userChoice, times: starter, remain: inputSize)
+  let result = blowUp(startString: userChoice, times: starter, remain: inputSize)
   print("The blownup string is: ", result)
 }
