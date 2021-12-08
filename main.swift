@@ -29,7 +29,7 @@ print("Input the string you want blownup: ")
 let userChoice = readLine()!
 let inputSize = userChoice.count
 if inputSize == 0 {
-  print("")
+  print("Must input something.")
   print("\nDone")
   exit(0)
 } else {
